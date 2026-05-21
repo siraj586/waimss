@@ -80,6 +80,44 @@ header {
   margin-left: 8px;
   letter-spacing: 0.5px;
 }
+
+/* Logo image + text helpers */
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.site-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.site-logo:hover {
+  transform: translateY(-2px);
+}
+.logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-text > span { font-size: 0.85em; }
+
+/* Smaller header / mobile adjustments */
+@media (max-width: 992px) {
+  .site-logo { height: 42px; }
+}
+@media (max-width: 768px) {
+  .site-logo { height: 36px; }
+  .logo-full { display: none; }
+}
+@media (max-width: 480px) {
+  .site-logo { height: 30px; }
+  .logo-text { font-size: 0.95rem; }
+}
 nav ul {
   display: flex;
   list-style: none;
